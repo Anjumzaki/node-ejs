@@ -1,5 +1,7 @@
 // load the things we need
 var express = require('express');
+var favicon = require('serve-favicon');
+
 var app = express();
 
 // set the view engine to ejs
@@ -16,6 +18,8 @@ app.get('/', function(req, res) {
 app.get('/about', function(req, res) {
 	res.render('pages/about');
 });
+
+app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
 app.listen(8080);
 console.log('8080 is the magic port');
