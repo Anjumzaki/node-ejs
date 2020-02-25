@@ -21,5 +21,5 @@ app.get('/about', function(req, res) {
 
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
 
-app.listen(8080);
+app.listen(process.env.PORT || 5000)
 console.log('8080 is the magic port');
